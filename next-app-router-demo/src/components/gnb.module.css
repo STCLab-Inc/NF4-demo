@@ -1,0 +1,9 @@
+.container {
+  display: flex;
+  justify-content: center;
+  border-bottom: 2px solid snow;
+  padding: 36px 0 24px;
+  background-color: #2a2a2a;
+  color: snow;
+  font-size: 18px;
+}
