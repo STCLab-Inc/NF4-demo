@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import "./globals.css";
-import InitializeNFScript from "./InitializeNFScript";
-import styles from "./page.module.css";
+import "../styles/globals.css";
+import InitializeNFScript from "../components/InitializeNFScript";
+import styles from "../styles/page.module.css";
 
 export const metadata: Metadata = {
   title: "NetFUNNEL Demo",

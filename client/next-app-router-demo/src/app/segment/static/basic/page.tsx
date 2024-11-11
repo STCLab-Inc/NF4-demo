@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import styles from "../../../page.module.css";
+import styles from "../../../../styles/page.module.css";
 
 export default function StaticBasic() {
   const router = useRouter();
