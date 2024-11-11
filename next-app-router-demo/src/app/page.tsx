@@ -6,9 +6,11 @@ export default function Home() {
     <div className={styles.common}>
       반갑습니다. 넷퍼넬 에이전트를 적용하기 위한 데모 앱입니다.
       <br />
+      넷퍼넬 에이전트 설치부터 대기실 노출까지 과정을 설명드리겠습니다.
       <br />
-      <b className={styles.title}>넷퍼넬 에이전트 스니펫을 적용합니다.</b>
-      <br />{" "}
+      <br />
+      <b className={styles.title}>넷퍼넬 에이전트 코드를 삽입합니다..</b>
+      <br />
       <a href="https://console.stclab.com/" target="_blank" className={styles.blue}>
         https://console.stclab.com
       </a>{" "}

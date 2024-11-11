@@ -17,8 +17,7 @@ export default function StaticSection() {
 
   return (
     <div className={styles.common}>
-      구간 제어를 적용해 봅시다.
-      <br />
+      <b className={styles.title}>구간 제어</b>
       <br />
       ● 세그먼트 설정
       <br />

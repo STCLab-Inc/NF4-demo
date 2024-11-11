@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import GNB from "@/components/GNB";
 import InitializeNFScript from "./InitializeNFScript";
+import styles from "./page.module.css";
 
 export const metadata: Metadata = {
   title: "NetFUNNEL Demo",
@@ -15,12 +15,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <InitializeNFScript />
-      </head>
       <body>
+        <InitializeNFScript />
         <main>
-          <GNB />
+          <div className={styles.gnb}>NetFUNNEL Javascript agent guide for Next.js (app router)</div>
           {children}
         </main>
       </body>

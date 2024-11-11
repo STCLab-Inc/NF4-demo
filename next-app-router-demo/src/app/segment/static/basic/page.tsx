@@ -8,7 +8,7 @@ export default function StaticBasic() {
   const router = useRouter();
 
   const handleClickBasic = () => {
-    window.nfStart({ projectKey: "service_216", segmentKey: "segKey_9945" }, function (res) {
+    window.nfStart({ projectKey: "PROJECT_KEY", segmentKey: "SEGMENT_KEY" }, function (res) {
       switch (res.status) {
         case "Success":
           router.push("basic/return?setting=false");
@@ -39,7 +39,7 @@ export default function StaticBasic() {
       <br />
       만약 실제 서비스에 적용하다가 타입 에러가 발생한다면 <span className={styles.goldenrod}>global.d.ts 파일을 참고</span>해주세요.
       <br />
-      페이지 진입 후 nfStop를 함수를 설정하기 위해 static/basic/return 폴더의 page.tsx 파일을 열고, 아래 버튼을 눌러주세요.
+      페이지 진입 후 nfStop를 함수가 실행되도록 하기 위해 static/basic/return 폴더의 page.tsx 파일을 열고, 아래 버튼을 눌러주세요.
       <br />
       <Link href="basic/return?setting=true" className={styles.blue}>
         [Basic]

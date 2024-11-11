@@ -14,7 +14,7 @@ export default function BasicReturn() {
 
   useEffect(() => {
     if (typeof window.nfStop === "function") {
-      window.nfStop({ projectKey: "service_216", segmentKey: "segKey_9945" }, function (res) {});
+      window.nfStop({ projectKey: "PROJECT_KEY", segmentKey: "SEGMENT_KEY" }, function (res) {});
     }
   }, []);
 
@@ -29,7 +29,7 @@ export default function BasicReturn() {
         <br />
         이제 페이지를 로드할 때 nfStop 함수가 호출되고, 이전에 받았던 넷퍼넬 키를 반납하여 진입 완료 처리를 하게 됩니다.
         <br />
-        다시 static/basic 폴더의 page.tsx 파일을 열고 아래 버튼을 눌러주세요.
+        다시 static/basic 폴더의 page.tsx 파일을 열고 아래 버튼을 눌러 대기실 테스트를 봐주세요.
         <br />
         <button className={styles.blue} onClick={handleClickPrevPage}>
           [이전 페이지]
