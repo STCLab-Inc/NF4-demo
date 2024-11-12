@@ -23,7 +23,7 @@ export default function StaticSection() {
       <br />
       넷퍼넬 콘솔에서 진입 허용 수를 0으로 설정하여 구간 제어 세그먼트를 생성해주세요.
       <br />
-      <span className={styles.green}>/src/app/segment/static/section/page.tsx</span> 파일을 열어주세요.
+      <span className={styles.gray}>/src/app/segment/static/section/page.tsx</span> 파일을 열어주세요.
       <br />
       handleClickSection 함수의 <span className={styles.yellow}>PROJECT_KEY</span>와 <span className={styles.yellow}>SEGMENT_KEY</span>를 콘솔에서 확인한 프로젝트 키와 세그먼트 키로 변경해주세요.
       <br />
@@ -38,7 +38,7 @@ export default function StaticSection() {
       <br />
       위에서 세그먼트를 생성할 때 진입 허용 수를 0으로 설정했기 때문에 무조건 대기를 하게 됩니다.
       <br />
-      nfStopSection 설정은 section 페이지로 넘어간 이후에 하겠습니다. <span className={styles.green}>/src/app/segment/static/section/target/page.tsx</span> 파일을 열어주세요.
+      nfStopSection 설정은 section 페이지로 넘어간 이후에 하겠습니다. <span className={styles.gray}>/src/app/segment/static/section/target/page.tsx</span> 파일을 열어주세요.
       <br />
       이제 아래 버튼을 눌러 대기실을 노출시키고, 넷퍼넬 콘솔에서 현재 세그먼트의 진입 허용 수를 1 이상으로 늘려 target 페이지로 넘어가 봅시다.
       <br />

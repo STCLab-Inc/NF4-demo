@@ -18,7 +18,7 @@ export default function Home() {
       <br />
       넷퍼넬 콘솔의 에이전트 - 클라이언트 측 에이전트 - JavaScript 페이지로 이동해주세요.
       <br />
-      코드 편집기로 돌아와서 <span className={styles.green}>/src/components/InitializeNFScript.tsx</span> 파일을 열고, 넷퍼넬 콘솔의 JavaScript 페이지의 2-1 스니펫 코드와 비교하여 아래 텍스트를
+      코드 편집기로 돌아와서 <span className={styles.gray}>/src/components/InitializeNFScript.tsx</span> 파일을 열고, 넷퍼넬 콘솔의 JavaScript 페이지의 2-1 스니펫 코드와 비교하여 아래 텍스트를
       스니펫에 있는 주소로 변경하고 저장하세요.
       <br />
       <span className={styles.yellow}>
@@ -33,9 +33,15 @@ export default function Home() {
       <br />
       만약 실제 서비스에 적용하다가 타입 에러가 발생한다면 <span className={styles.yellow}>global.d.ts</span> 파일을 참고해주세요.
       <br />
-      InitializeNFScript는 <span className={styles.green}>/src/app/layout.tsx</span>에 삽입해두었으니 참고해주세요.
+      InitializeNFScript는 <span className={styles.gray}>/src/app/layout.tsx</span>에 삽입해두었으니 참고해주세요.
       <br />
-      (page router 방식일 경우, _app.tsx에 넣어주세요.)
+      <br />
+      <div className={styles.box}>
+        <span className={styles.yellow}>page router 방식</span>일 경우, <span className={styles.gray}>/pages/_app.tsx</span>에 넣어주세요.
+        <br />
+        <span className={styles.yellow}>react</span>의 경우, 넷퍼넬 콘솔의 JavaScript 페이지의 2-1 스니펫 코드를 복사하여 <span className={styles.gray}>public/index.html</span>의 {`<head>`} 태그 안에
+        넣어주세요.
+      </div>
       <br />
       에이전트 스크립트 적용이 끝났습니다. 브라우저에서 에이전트 파일을 잘 불러오는지 확인합시다.
       <br />

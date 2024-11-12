@@ -36,7 +36,7 @@ export default function StaticBasic() {
       <br />
       넷퍼넬 콘솔에서 진입 허용 수를 0으로 설정하여 기본 제어 세그먼트를 생성해주세요.
       <br />
-      <span className={styles.green}>/src/app/segment/static/basic/page.tsx</span> 파일을 열어주세요.
+      <span className={styles.gray}>/src/app/segment/static/basic/page.tsx</span> 파일을 열어주세요.
       <br />
       handleClickBasic 함수의 <span className={styles.yellow}>PROJECT_KEY</span>와 <span className={styles.yellow}>SEGMENT_KEY</span>를 넷퍼넬 콘솔에서 확인한 프로젝트 키와 세그먼트 키로 변경해주세요.
       <br />
@@ -46,7 +46,7 @@ export default function StaticBasic() {
       <br />
       이제 target 페이지에 진입 후 nfStop를 함수가 실행되도록 해야 합니다.
       <br />
-      <span className={styles.green}>/src/app/segment/static/basic/target/page.tsx</span> 파일을 열고, 아래 버튼을 눌러주세요.
+      <span className={styles.gray}>/src/app/segment/static/basic/target/page.tsx</span> 파일을 열고, 아래 버튼을 눌러주세요.
       <br />
       <Link href="basic/target?setting=true" className={styles.blue}>
         [Navigate to Target Page]

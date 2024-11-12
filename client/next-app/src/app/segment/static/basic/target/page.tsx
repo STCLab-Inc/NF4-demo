@@ -28,7 +28,7 @@ export default function BasicTarget() {
         <br />
         이제 이 페이지를 로드할 때 nfStop 함수가 호출되고, 이전에 받았던 넷퍼넬 키를 반납하여 진입 완료 처리를 하게 됩니다.
         <br />
-        다시 <span className={styles.green}>/src/app/segment/static/basic/page.tsx</span> 파일을 열고 아래 버튼을 눌러 <b>2) 대기실 테스트</b> 단계를 진행해주세요.
+        다시 <span className={styles.gray}>/src/app/segment/static/basic/page.tsx</span> 파일을 열고 아래 버튼을 눌러 <b>2) 대기실 테스트</b> 단계를 진행해주세요.
         <br />
         <button className={styles.blue} onClick={handleClickPrevPage}>
           [이전 페이지]
