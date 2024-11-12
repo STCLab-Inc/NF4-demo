@@ -4,12 +4,10 @@ import styles from "../../styles/page.module.css";
 export default function Segment() {
   return (
     <div className={styles.common}>
-      <b className={styles.title}>2. 세그먼트 설정</b>
-      <br />
       넷퍼넬에서 진입 제어를 적용하는 방식에는 크게 두 가지가 있습니다.
       <br />
       <br />
-      <b className={styles.subTitle}>2-1. 정적 적용</b>
+      <b className={styles.title}>1. 정적 적용</b>
       <br />
       제어를 걸고 싶은 페이지로 이동하는 이벤트에 적용하는 방식으로, <span className={styles.yellow}>넷퍼넬 함수를 코드에 반영</span>해야 합니다.
       <br />
@@ -22,7 +20,7 @@ export default function Segment() {
       </Link>
       <br />
       <br />
-      <b className={styles.subTitle}>2-2. 동적 적용</b>
+      <b className={styles.title}>2. 동적 적용</b>
       <br />
       코드 상의 수정 없이 넷퍼넬 콘솔에서 <span className={styles.yellow}>트리거 규칙</span>을 설정하여 적용합니다.
       <br />

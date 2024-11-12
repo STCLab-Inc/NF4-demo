@@ -1,5 +1,3 @@
-"use client";
-
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect } from "react";
@@ -24,12 +22,11 @@ export default function BasicReturn() {
         페이지 진입 후 nfStop 함수를 호출하여 넷퍼넬 키를 반납해야 합니다.
         <br />
         <br />
-        useEffect 내의 <span className={styles.goldenrod}>PROJECT_KEY</span>와 <span className={styles.goldenrod}>SEGMENT_KEY</span>에 이전 페이지에서 입력했던 프로젝트 키와 세그먼트 키를 넣고
-        저장하세요.
+        useEffect 내의 <span className={styles.yellow}>PROJECT_KEY</span>와 <span className={styles.yellow}>SEGMENT_KEY</span>에 이전 페이지에서 입력했던 프로젝트 키와 세그먼트 키를 넣고 저장하세요.
         <br />
         이제 페이지를 로드할 때 nfStop 함수가 호출되고, 이전에 받았던 넷퍼넬 키를 반납하여 진입 완료 처리를 하게 됩니다.
         <br />
-        다시 static/basic 폴더의 page.tsx 파일을 열고 아래 버튼을 눌러 대기실 테스트를 봐주세요.
+        다시 static/basic 폴더의 index.tsx 파일을 열고 아래 버튼을 눌러 대기실 테스트를 봐주세요.
         <br />
         <button className={styles.blue} onClick={handleClickPrevPage}>
           [이전 페이지]

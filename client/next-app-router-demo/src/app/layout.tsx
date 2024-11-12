@@ -16,6 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        {/* 여기에 넷퍼넬 스니펫 삽입 */}
         <InitializeNFScript />
         <main>
           <div className={styles.gnb}>NetFUNNEL Javascript agent guide for Next.js (app router)</div>

@@ -17,15 +17,28 @@
 }
 
 .title {
-  font-size: 20px;
+  font-size: 22px;
   line-height: 300%;
 }
 
-.goldenrod {
+.subTitle {
+  font-size: 20px;
+  line-height: 240%;
+}
+
+.yellow {
   color: goldenrod;
 }
 
 .blue {
   color: cornflowerblue;
   text-decoration: none;
+}
+
+.green {
+  color: mediumseagreen;
+}
+
+.red {
+  color: tomato;
 }
