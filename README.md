@@ -7,7 +7,6 @@
 
 - React
 - Next.js (App router)
-- Next.js (Page router)
 
 ### mobile agent
 

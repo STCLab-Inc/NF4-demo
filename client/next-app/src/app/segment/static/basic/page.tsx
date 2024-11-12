@@ -42,7 +42,7 @@ export default function StaticBasic() {
       <br />
       (프로젝트 키는 넷퍼넬 콘솔 - 프로젝트 - SNB - 프로젝트 명 아래 "service_"로 시작하는 값입니다. 해당 텍스트를 클릭하면 복사됩니다.)
       <br />
-      만약 실제 서비스에 적용하다가 타입 에러가 발생한다면 <span className={styles.yellow}>global.d.ts 파일을 참고</span>해주세요.
+      만약 실제 서비스에 적용하다가 타입 에러가 발생한다면 <span className={styles.yellow}>global.d.ts</span> 파일을 참고해주세요.
       <br />
       이제 target 페이지에 진입 후 nfStop를 함수가 실행되도록 해야 합니다.
       <br />

@@ -13,7 +13,7 @@ export default function Segment() {
       <br />
       제어를 걸고 싶은 페이지로 이동하는 이벤트에 적용하는 방식으로, <span className={styles.yellow}>넷퍼넬 함수를 코드에 반영</span>해야 합니다.
       <br />
-      예를 들어, /product 페이지에 대기를 걸고 싶다면, /product 로 넘어가는 button이나 a 태그의 click 이벤트에 넷퍼넬 함수를 적용합니다.
+      예를 들어, /target 페이지에 대기를 걸고 싶다면, /target 로 넘어가는 button이나 a 태그의 click 이벤트에 넷퍼넬 함수를 적용합니다.
       <br />
       정적 적용에 대해 알고 싶다면 다음을 클릭하세요.
       <br />
