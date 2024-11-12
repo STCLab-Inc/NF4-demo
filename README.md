@@ -5,4 +5,4 @@
 
 ### client agent
 
-- next-app: Next.js(app router) 버전의 데모 앱입니다. 해당 데모 앱에 page router 방식과 react에서 에이전트 적용 방법도 실려 있습니다.
+- next-app: Next.js(app router) 데모 앱입니다. 해당 데모 앱에 page router 방식과 react에서 에이전트 적용 방법도 실려 있습니다.
