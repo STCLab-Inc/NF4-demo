@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import styles from "../../../../styles/page.module.css";
@@ -18,55 +19,71 @@ export default function StaticBasic() {
 
   return (
     <div className={styles.common}>
-      <b className={styles.title}>2-1. 정적 적용</b>
+      <b className={styles.title}>정적 적용</b>
       <br />
-      정적 적용으로는 <span className={styles.yellow}>기본 제어</span>와 <span className={styles.yellow}>구간 제어</span>를 사용할 수 있습니다. 이 페이지에서는 기본 제어를 적용하는 방법을
-      알아보겠습니다.
+      정적 적용 방식은 nfStart, nfStartSection과 같은 <span className={styles.yellow}>넷퍼넬 함수</span>를 통해 진입을 제어합니다.
       <br />
-      (바로 구간 제어에 대해 알아보고 싶으시다면, 오른쪽 버튼을 누르새요.{" "}
-      <Link href="/segment/static/section" className={styles.blue}>
-        [구간 제어]
+      /segment/static/basic/target 페이지로 진입하기 전 페이지인 현재 페이지에서 nfStart를 실행시키면 대기실이 노출되고, 대기가 끝나면 target 페이지로 넘어갑니다.
+      <br />
+      정적 적용 방식으로는 <span className={styles.yellow}>기본 제어</span>와 <span className={styles.yellow}>구간 제어</span>를 사용할 수 있습니다.
+      <br />
+      <br />
+      이 페이지에서는 기본 제어를 적용하는 방법을 알아보겠습니다.
+      <br />
+      바로 구간 제어에 대해 알아보고 싶으시다면, 오른쪽 버튼을 누르새요.{" "}
+      <Link href="/segment/static/section" className={styles.gnb_btn}>
+        구간 제어 ⇲{" "}
       </Link>
-      )
       <br />
       <br />
-      <b className={styles.subTitle}>기본 제어</b>
+      <p className={styles.sub_title}>기본 제어</p>
+      <b>1. 세그먼트 설정</b>
       <br />
-      1) 세그먼트 설정
+      1-1. 넷퍼넬 콘솔에서 세그먼트 페이지에 진입합니다.
       <br />
-      넷퍼넬 콘솔에서 진입 허용 수를 0으로 설정하여 기본 제어 세그먼트를 생성해주세요.
+      <Image alt="console_segment_navi" src="/images/console_segment_navi.png" width={400} height={400} />
       <br />
-      <span className={styles.gray}>/src/app/segment/static/basic/page.tsx</span> 파일을 열어주세요.
+      1-2. 기본 제어 세그먼트 생성 페이지로 진입합니다.
+      <Image alt="console_basic_create" src="/images/console_basic_create.png" width={800} height={400} />
       <br />
-      handleClickBasic 함수의 <span className={styles.yellow}>PROJECT_KEY</span>와 <span className={styles.yellow}>SEGMENT_KEY</span>를 넷퍼넬 콘솔에서 확인한 프로젝트 키와 세그먼트 키로 변경해주세요.
+      1-3. ① 기본 설정에서 세그먼트 이름과 세그먼트 키를 입력하고 생성 버튼을 누르세요.
       <br />
-      (프로젝트 키는 넷퍼넬 콘솔 - 프로젝트 - SNB - 프로젝트 명 아래 "service_"로 시작하는 값입니다. 해당 텍스트를 클릭하면 복사됩니다.)
+      <Image alt="console_basic_create_1" src="/images/console_basic_create_1.png" width={800} height={360} />
       <br />
-      만약 실제 서비스에 적용하다가 타입 에러가 발생한다면 <span className={styles.yellow}>global.d.ts</span> 파일을 참고해주세요.
+      1-4. 세그먼트 목록 페이지로 가주세요. 아래 그림의 1번이 <span className={styles.yellow}>프로젝트 키</span>고, 2번이 <span className={styles.yellow}>세그먼트 키</span>에 해당합니다.
       <br />
-      이제 target 페이지에 진입 후 nfStop를 함수가 실행되도록 해야 합니다.
+      <Image alt="console_segment_list" src="/images/console_segment_list.png" width={1000} height={320} />
+      1-5. <span className={styles.green}>/src/app/segment/static/basic/page.tsx</span> 파일을 열어주세요. 아래 그림의 1번에 프로젝트 키를, 2번에 세그먼트 키를 넣어주세요.
       <br />
-      <span className={styles.gray}>/src/app/segment/static/basic/target/page.tsx</span> 파일을 열고, 아래 버튼을 눌러주세요.
+      <Image alt="app_static_basic" src="/images/app_static_basic.png" width={800} height={240} />
+      <br />
+      1-6. handleClickBasic 함수가 실행되면, 대기자가 있을 경우 대기실이 노출됩니다.
+      <br />
+      ㅤㅤ(handleClickBasic 함수는 아래 2. 대기실 테스트 단계의 버튼에서 호출합니다.)
+      <br />
+      1-7. 이제 타겟 페이지에 진입 후 <span className={styles.yellow}>nfStop</span>가 실행되어 진입 완료 처리를 하도록 해야 합니다. 아래 버튼을 눌러 타겟 페이지를 설정합시다.
       <br />
       <Link href="basic/target?setting=true" className={styles.blue}>
-        [Navigate to Target Page]
+        타겟 페이지 설정 ⇲
       </Link>
       <br />
       <br />
-      2) 대기실 테스트
+      <b>2. 대기실 테스트</b>
       <br />
-      이제 실제 대기실이 화면에서 어떻게 동작하는지 보겠습니다.
+      테스트 단계는 다음과 같습니다.
       <br />
-      아래 버튼을 클릭하면 nfStart를 실행하고, 세그먼트에서 설정한 대기실이 노출됩니다.
+      2-1. 아래 [타겟 페이지 진입 ⇲] 버튼을 클릭하여 대기실을 노출한다.
       <br />
-      위에서 세그먼트를 생성할 때 진입 허용 수를 0으로 설정했기 때문에 무조건 대기를 하게 됩니다.
+      2-2. 세그먼트 수정에서 진입 허용 수를 1 이상으로 변경하여 저장한다. (아래 그림의 1번 부분)
+      <Image alt="console_basic_setting" src="/images/console_basic_setting.png" width={800} height={560} />
       <br />
-      target 페이지에서는 nfStop이 실행되고 진입한 키를 반납하여 진입 완료처리가 됩니다.
+      2-3. 대기가 완료되어 타겟 페이지로 넘어간다.
       <br />
-      이제 아래 버튼을 눌러 대기실을 노출시키고, 넷퍼넬 콘솔에서 현재 세그먼트의 진입 허용 수를 1 이상으로 늘려 target 페이지로 넘어가 봅시다.
+      <br />
+      <b>이제 위 테스트 순서대로 진행해주세요.</b>
       <br />
       <button className={styles.blue} onClick={handleClickBasic}>
-        [Navigate to Target Page]
+        타겟 페이지 진입 ⇲
       </button>
     </div>
   );

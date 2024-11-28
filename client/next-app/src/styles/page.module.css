@@ -1,28 +1,49 @@
 .gnb {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  gap: 24px;
   border-bottom: 2px solid snow;
   padding: 36px 0 24px;
   background-color: #2a2a2a;
   color: snow;
-  font-size: 18px;
+  font-size: 22px;
   white-space: pre-wrap;
 }
 
+.gnb_btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 36px;
+}
+
+.gnb_btn {
+  all: unset;
+  cursor: pointer;
+  font-size: 18px;
+  color: cornflowerblue;
+  text-decoration: underline;
+}
+
 .common {
-  padding: 24px;
+  padding: 24px 24px 120px 24px;
   color: snow;
   font-size: 18px;
   line-height: 200%;
+  white-space: pre-line;
 }
 
 .title {
   font-size: 22px;
+  font-weight: 700;
   line-height: 300%;
 }
 
-.subTitle {
+.sub_title {
   font-size: 20px;
+  font-weight: 600;
   line-height: 240%;
 }
 
@@ -39,10 +60,31 @@
   color: lightslategray;
 }
 
+.red {
+  color: tomato;
+}
+
+.green {
+  color: limegreen;
+}
+
 .box {
   border: 2px solid snow;
   border-radius: 4px;
   width: 100%;
   padding: 6px 12px;
   line-height: 160%;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.image_box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
 }

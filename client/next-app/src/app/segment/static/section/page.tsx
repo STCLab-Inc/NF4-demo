@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import styles from "../../../../styles/page.module.css";
 
@@ -17,33 +18,54 @@ export default function StaticSection() {
 
   return (
     <div className={styles.common}>
-      <b className={styles.subTitle}>구간 제어</b>
+      <p className={styles.sub_title}>구간 제어</p>
+      구간 제어는 시작 페이지와 종료 페이지가 있습니다.
       <br />
-      1) 세그먼트 설정
+      시작 페이지의 진입 지점에서 <span className={styles.yellow}>nfStartSection</span>을 실행하여 대기를 시작합니다.
       <br />
-      넷퍼넬 콘솔에서 진입 허용 수를 0으로 설정하여 구간 제어 세그먼트를 생성해주세요.
+      시작 페이지에 진입한 이후부터 진입 완료 처리를 하기 전까지 구간에 진입해 있음을 서버에 알리며(<span className={styles.yellow}>Alive Notice</span>), 대기자 수는 줄어들지 않습니다.
       <br />
-      <span className={styles.gray}>/src/app/segment/static/section/page.tsx</span> 파일을 열어주세요.
+      종료 페이지에서 <span className={styles.yellow}>nfStopSection</span>을 실행하여 진입 완료 처리를 합니다.
       <br />
-      handleClickSection 함수의 <span className={styles.yellow}>PROJECT_KEY</span>와 <span className={styles.yellow}>SEGMENT_KEY</span>를 콘솔에서 확인한 프로젝트 키와 세그먼트 키로 변경해주세요.
       <br />
-      (프로젝트 키는 넷퍼넬 콘솔 - 프로젝트 - SNB - 프로젝트 명 아래 "service_"로 시작하는 값입니다. 해당 텍스트를 클릭하면 복사됩니다.)
+      <b>1. 세그먼트 설정</b>
       <br />
-      만약 실제 서비스에 적용하다가 타입 에러가 발생한다면 <span className={styles.yellow}>global.d.ts</span> 파일을 참고해주세요.
+      1-1. 구간 제어 세그먼트 생성 페이지로 진입합니다.
+      <Image alt="console_section_create" src="/images/console_section_create.png" width={800} height={420} />
+      <br />
+      1-2. ① 기본 설정에서 세그먼트 이름과 세그먼트 키를 입력하고 생성 버튼을 누르세요.
+      <br />
+      <Image alt="console_section_create_1" src="/images/console_section_create_1.png" width={800} height={380} />
+      <br />
+      1-3. 세그먼트 목록 페이지로 가주세요. 아래 그림의 1번이 <span className={styles.yellow}>프로젝트 키</span>고, 2번이 <span className={styles.yellow}>세그먼트 키</span>에 해당합니다.
+      <br />
+      <Image alt="console_segment_list" src="/images/console_segment_list.png" width={1000} height={320} />
+      1-4. <span className={styles.green}>/src/app/segment/static/section/page.tsx</span> 파일을 열어주세요. 아래 그림의 1번에 프로젝트 키를, 2번에 세그먼트 키를 넣어주세요.
+      <Image alt="app_static_section" src="/images/app_static_section.png" width={800} height={240} />
+      <br />
+      1-5. handleClickSection 함수가 실행되면, 대기자가 있을 경우 대기실이 노출됩니다.
+      <br />
+      ㅤㅤ(handleClickSection 함수는 아래 2. 대기실 테스트 단계의 버튼에서 호출합니다.)
       <br />
       <br />
       2. 대기실 테스트
       <br />
-      아래 버튼을 클릭하면 nfStartSection을 실행하고, 세그먼트에서 설정한 대기실이 노출됩니다.
+      테스트 단계는 다음과 같습니다.
       <br />
-      위에서 세그먼트를 생성할 때 진입 허용 수를 0으로 설정했기 때문에 무조건 대기를 하게 됩니다.
+      2-1. 아래 [타겟 페이지 진입 ⇲] 버튼을 클릭하여 대기실을 노출한다.
       <br />
-      nfStopSection 설정은 section 페이지로 넘어간 이후에 하겠습니다. <span className={styles.gray}>/src/app/segment/static/section/target/page.tsx</span> 파일을 열어주세요.
+      2-2. 세그먼트 수정에서 진입 허용 수를 1 이상으로 변경하여 저장한다. (아래 그림의 1번 부분)
+      <Image alt="console_section_setting" src="/images/console_section_setting.png" width={800} height={560} />
       <br />
-      이제 아래 버튼을 눌러 대기실을 노출시키고, 넷퍼넬 콘솔에서 현재 세그먼트의 진입 허용 수를 1 이상으로 늘려 target 페이지로 넘어가 봅시다.
+      2-3. 대기가 완료되어 타겟 페이지로 넘어간다.
+      <br />
+      2-4. 타겟 페이지에서 <span className={styles.yellow}>nfStopSection</span>을 설정하여 진입 완료 처리한다.
+      <br />
+      <br />
+      <b>이제 위 테스트 순서대로 진행해주세요.</b>
       <br />
       <button className={styles.blue} onClick={handleClickSection}>
-        [Navigate to Target Page]
+        타겟 페이지 진입 ⇲
       </button>
     </div>
   );
