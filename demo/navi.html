@@ -44,6 +44,28 @@
     all: unset;
     cursor: pointer;
   }
+
+  .flicker-text {
+    animation: flicker 3s infinite alternate;
+  }
+
+  @keyframes flicker {
+    0% {
+      color: #ff4d4d;
+    }
+    25% {
+      color: #ffd700;
+    }
+    50% {
+      color: #4dd2ff;
+    }
+    75% {
+      color: #cc99ff;
+    }
+    100% {
+      color: #ff4d4d;
+    }
+  }
 </style>
 
 <body>
@@ -56,6 +78,9 @@
       <li><a href="contents/classic.html" target="_top">Classic</a></li>
       <li><a href="contents/sports.html" target="_top">Sports</a></li>
       <li><a href="contents/exhibition.html" target="_top">Exhibition</a></li>
+      <li>
+        <a class="flicker-text" href="shop.html?category=clothes" target="_top">Shop</a>
+      </li>
     </ul>
   </nav>
 </body>
